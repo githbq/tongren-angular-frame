@@ -7,7 +7,7 @@
     "release": "gulp build",
     "watch": "webpack --config ./gulp/webpack.config.js --progress --profile --colors --display-error-details --display-cached --watch"
   },
-  "author": "songgl",
+  "author": "hbq",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.7",

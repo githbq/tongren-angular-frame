@@ -16,7 +16,16 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: extend({
         app: [config.path.src + '/app.js'],
-        vendors: ['angular', 'angular-ui-router', 'angular-ui-bootstrap', 'oclazyload']
+        vendors: [
+            'underscore',
+            'jquery',
+            'angular',
+            'angular-ui-router',
+            'angular-ui-bootstrap',
+            'oclazyload',
+            'angular-ui-layout',
+            'angular-ui-grid'
+        ]
     }, config.path.js),
     output: {
         path: __dirname + config.path.build,

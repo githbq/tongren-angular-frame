@@ -57,17 +57,17 @@ module.exports = {
             allChunks: true
         }),
         new webpack.optimize.DedupePlugin(),
-        //压缩
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            compress: {
-                warnings: false,
-                drop_console: true
-            },
-            output: {
-                comments: false
-            }
-        }),
+        ////压缩
+        //new webpack.optimize.UglifyJsPlugin({
+        //    minimize: true,
+        //    compress: {
+        //        warnings: false,
+        //        drop_console: true
+        //    },
+        //    output: {
+        //        comments: false
+        //    }
+        //}),
         // html模板自动注入打包后的文件
         new HtmlWebpackPlugin({
             template: './src/index.html',
