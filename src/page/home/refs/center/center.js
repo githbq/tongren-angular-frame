@@ -1,0 +1,150 @@
+var templateStr = require('./center.html');
+require('./center.less');
+require('../breadcrumb/breadcrumb');
+
+angular.module('app').directive('frameCenter', function ($templateCache) {
+    return {
+        transclude: true,
+        restrict: 'C',
+        template: templateStr,
+        controller: function ($scope, uiGridConstants) {
+            //$scope.gridOptions = {
+            //    totalItems: 60,
+            //    enableSorting: false,
+            //    showGridFooter: false,
+            //    enableGridMenu: true,
+            //    enableFiltering: false,
+            //    paginationPageSizes: [3, 50, 75, 100],
+            //    paginationPageSize: 5,
+            //    useExternalPagination: false,
+            //    useExternalSorting: false,
+            //    paginationChanged: function () {
+            //        alert('paginationChanged')
+            //    }
+            //};
+            //$scope.gridOptions.onRegisterApi = function (gridApi) {
+            //    $scope.gridOptions.gridApi = gridApi;
+            //    //$interval( function() {
+            //    //    $scope.gridApi.core.handleWindowResize();
+            //    //}, 500, 10);
+            //};
+            //$scope.gridOptions.data = [
+            //    {
+            //        "name": "Ethel Price",
+            //        "gender": "female",
+            //        "company": "Enersol"
+            //    },
+            //    {
+            //        "name": "Claudine Neal",
+            //        "gender": "female",
+            //        "company": "Sealoud"
+            //    },
+            //    {
+            //        "name": "Beryl Rice",
+            //        "gender": "female",
+            //        "company": "Velity"
+            //    },
+            //    {
+            //        "name": "Wilder Gonzales",
+            //        "gender": "male",
+            //        "company": "Geekko"
+            //    },
+            //    {
+            //        "name": "Georgina Schultz",
+            //        "gender": "female",
+            //        "company": "Suretech"
+            //    },
+            //    {
+            //        "name": "Carroll Buchanan",
+            //        "gender": "male",
+            //        "company": "Ecosys"
+            //    },
+            //    {
+            //        "name": "Valarie Atkinson",
+            //        "gender": "female",
+            //        "company": "Hopeli"
+            //    },
+            //    {
+            //        "name": "Schroeder Mathews",
+            //        "gender": "male",
+            //        "company": "Polarium"
+            //    },
+            //    {
+            //        "name": "Lynda Mendoza",
+            //        "gender": "female",
+            //        "company": "Dogspa"
+            //    },
+            //    {
+            //        "name": "Sarah Massey",
+            //        "gender": "female",
+            //        "company": "Bisba"
+            //    },
+            //    {
+            //        "name": "Robles Boyle",
+            //        "gender": "male",
+            //        "company": "Comtract"
+            //    },
+            //    {
+            //        "name": "Evans Hickman",
+            //        "gender": "male",
+            //        "company": "Parleynet"
+            //    },
+            //    {
+            //        "name": "Dawson Barber",
+            //        "gender": "male",
+            //        "company": "Dymi"
+            //    },
+            //    {
+            //        "name": "Bruce Strong",
+            //        "gender": "male",
+            //        "company": "Xyqag"
+            //    },
+            //    {
+            //        "name": "Nellie Whitfield",
+            //        "gender": "female",
+            //        "company": "Exospace"
+            //    },
+            //    {
+            //        "name": "Jackson Macias",
+            //        "gender": "male",
+            //        "company": "Aquamate"
+            //    },
+            //    {
+            //        "name": "Pena Pena",
+            //        "gender": "male",
+            //        "company": "Quarx"
+            //    },
+            //    {
+            //        "name": "Lelia Gates",
+            //        "gender": "female",
+            //        "company": "Proxsoft"
+            //    },
+            //    {
+            //        "name": "Letitia Vasquez",
+            //        "gender": "female",
+            //        "company": "Slumberia"
+            //    },
+            //    {
+            //        "name": "Trevino Moreno",
+            //        "gender": "male",
+            //        "company": "Conjurica"
+            //    }
+            //];
+            //$scope.gridOptions.columnDefs = [
+            //    {name: 'name', aggregationType: uiGridConstants.aggregationTypes.count},
+            //    {
+            //        name: 'gender', filter: {term: 'male'}, width: 150, enableCellEdit: false,
+            //        cellClass: function (grid, row, col, rowRenderIndex, colRenderIndex) {
+            //            if (grid.getCellValue(row, col) === 'male') {
+            //                return 'blue';
+            //            } else if (grid.getCellValue(row, col) === 'female') {
+            //                return 'pink';
+            //            }
+            //        }
+            //    },
+            //    {name: 'age', aggregationType: uiGridConstants.aggregationTypes.avg, width: 100},
+            //    {name: 'company', enableFiltering: false, width: 200}
+            //];
+        }
+    };
+});
