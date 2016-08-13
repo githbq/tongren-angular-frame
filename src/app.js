@@ -9,7 +9,7 @@ require('components/index');
 require('angular-toast');
 var deps = ['angular-toast'];
 deps=deps.concat(['ui.router','ui.layout', 'ui.bootstrap', 'oc.lazyLoad', 'commonService']);
-deps=deps.concat(['ui.grid', 'ui.grid.moveColumns', 'ui.grid.autoResize', 'ui.grid.pinning', 'ui.grid.resizeColumns', 'ui.grid.cellNav', 'ui.grid.pagination']);
+deps=deps.concat(['ui.grid','ui.grid.selection', 'ui.grid.moveColumns', 'ui.grid.autoResize', 'ui.grid.pinning', 'ui.grid.resizeColumns', 'ui.grid.cellNav', 'ui.grid.pagination']);
 deps=deps.concat(['common.directives', 'common.services', 'common.filters']);
 var app = angular.module('app', deps);
 var config = require('./config/config.js');

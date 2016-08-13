@@ -1,36 +1,6 @@
 var treeData = {};
 treeData.tree = [
     {
-        "$$isExpend":true,
-        "id": "1",
-        "pid": "0",
-        "name": "页面",
-        "children": [
-            {
-                "uiSref": "home.msgtalk",
-                "id": "11",
-                "pid": "3",
-                "name": "用户会话1",
-                "url":"#/home/msgtalk"
-            },
-            {
-                "uiSref": "home.msgtalk2",
-                "id": "12",
-                "pid": "3",
-                "name": "用户会话2",
-                "url":"#/home/msgtalk2"
-            }
-            ,
-            {
-                "uiSref": "home.msgtalk3",
-                "id": "12",
-                "pid": "3",
-                "name": "用户会话3",
-                "url":"#/home/msgtalk3"
-            }
-        ]
-    },
-    {
         "$$isExpend": true,
         "id": "2",
         "pid": "0",

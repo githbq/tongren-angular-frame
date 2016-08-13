@@ -39,7 +39,12 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 		{displayName:'手机号',name:'mobilePhone', aggregationType: uiGridConstants.aggregationTypes.count},
 		{displayName:'组别',name:'teamName', aggregationType: uiGridConstants.aggregationTypes.count},
 		{displayName:'是否加班',name:'isOverTime', aggregationType: uiGridConstants.aggregationTypes.count},
-		{displayName:'操作', enableFiltering: false,name:'operation', aggregationType: uiGridConstants.aggregationTypes.count}
+		{displayName:'操作',
+			enableFiltering: false,name:'operation',
+			aggregationType: uiGridConstants.aggregationTypes.count,
+			 	cellTemplate: '<button type="button" class="btn btn-default">查看</button>'
+			//	cellTemplate: '<button id="editBtn" type="button" class="btn-small" ng-click="grid.appScope.edit(row.entity)" >Edit</button> '
+		}
 	];
 });
 
