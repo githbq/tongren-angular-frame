@@ -86,7 +86,7 @@ treeData.tree = [
                 "uiSref": "home.shortmessage",
                 "id": "71",
                 "pid": "0",
-                "name": "会议管理",
+                "name": "短信管理",
                 "url":"#/home/shortmessage"
             }
         ]
