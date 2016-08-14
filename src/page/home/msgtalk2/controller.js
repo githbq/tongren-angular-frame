@@ -1,11 +1,11 @@
 require('./msgtalk2.less');
 require('./refs/index');
-angular.module('app').controller('homemsgtalk2Controller', function ($scope, mDialog) {
+angular.module('app').controller('homemsgtalk2Controller', function ($scope, customDialog) {
     $scope.items = ['item1', 'item2', 'item3'];
 
     $scope.animationsEnabled = true;
     $scope.open = function (size) {
-        mDialog.open({
+        customDialog.open({
             title: '1111AAAAB',
             animation: $scope.animationsEnabled,
             content: require('./template.html'),

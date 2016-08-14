@@ -1,4 +1,4 @@
-angular.module('app').factory('mDialog', function ($uibModal) {
+angular.module('app').factory('customDialog', function ($uibModal) {
     return {
         open: function (option) {
             var modalInstance = $uibModal.open({

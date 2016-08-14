@@ -14,6 +14,7 @@ deps=deps.concat(['common.directives', 'common.services', 'common.filters']);
 var app = angular.module('app', deps);
 var config = require('./config/config.js');
 require('components/directives/grid/grid');
+require('components/services/dialog/dialog');
 function getRouter(page, name, supName) {
     var pageName = supName ? supName + '/' + name : name;
     var defaultRouter = {

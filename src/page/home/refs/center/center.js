@@ -19,7 +19,7 @@ angular.module('app').directive('frameCenter', function ($templateCache) {
             //    useExternalPagination: false,
             //    useExternalSorting: false,
             //    paginationChanged: function () {
-            //        alert('paginationChanged')
+            //        alert('paginationChanged');
             //    }
             //};
             //$scope.gridOptions.onRegisterApi = function (gridApi) {

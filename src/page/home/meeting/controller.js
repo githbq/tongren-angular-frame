@@ -12,7 +12,7 @@ angular.module('app').controller('homemeetingController', function($scope,uiGrid
 		useExternalPagination: false,
 		useExternalSorting: false,
 		paginationChanged: function () {
-			alert('paginationChanged')
+			alert('paginationChanged');
 		}
 	};
 	$scope.gridOptions.onRegisterApi = function (gridApi) {

@@ -1,5 +1,20 @@
 require('./account.less');
-angular.module('app').controller('homeaccountController', function($scope,uiGridConstants) {
+angular.module('app').controller('homeaccountController', function($scope,uiGridConstants,customDialog) {
+	$scope.open = function (size) {
+		customDialog.open({
+			title: '1111AAAAB',
+			animation: true,
+			content: require('./showdegtail.html'),
+			ctrl: function ($scope, $uibModalInstance) {
+
+			},
+			size: size,
+			onLoad: function (selectedItem) {
+			},
+			onClose: function () {
+			}
+		});
+	}
 	$scope.gridOptions = {
 	    totalItems: 60,
 	    enableSorting: false,
@@ -11,7 +26,7 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 	    useExternalPagination: false,
 	    useExternalSorting: false,
 	    paginationChanged: function () {
-	        alert('paginationChanged')
+	        alert('paginationChanged');
 	    }
 	};
 	$scope.gridOptions.onRegisterApi = function (gridApi) {
@@ -42,7 +57,7 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 		{displayName:'操作',
 			enableFiltering: false,name:'operation',
 			aggregationType: uiGridConstants.aggregationTypes.count,
-			 	cellTemplate: '<button type="button" class="btn btn-default">查看</button>'
+			 	cellTemplate: '<button type="button" class="btn btn-default" ng-click="grid.appScope.open(\'lg\')">查看</button>'
 			//	cellTemplate: '<button id="editBtn" type="button" class="btn-small" ng-click="grid.appScope.edit(row.entity)" >Edit</button> '
 		}
 	];

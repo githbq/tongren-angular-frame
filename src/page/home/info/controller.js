@@ -11,7 +11,7 @@ angular.module('app').controller('homeinfoController', function($scope,uiGridCon
 		useExternalPagination: false,
 		useExternalSorting: false,
 		paginationChanged: function () {
-			alert('paginationChanged')
+			alert('paginationChanged');
 		}
 	};
 	$scope.gridOptions.onRegisterApi = function (gridApi) {

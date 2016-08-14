@@ -17,7 +17,7 @@ angular.module('app').directive('knowledgelib', function ($templateCache) {
                 useExternalPagination: false,
                 useExternalSorting: false,
                 paginationChanged: function () {
-                    alert('paginationChanged')
+                    alert('paginationChanged');
                 }
             };
             $scope.gridOptions.onRegisterApi = function (gridApi) {

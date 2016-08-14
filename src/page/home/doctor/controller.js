@@ -12,7 +12,7 @@ angular.module('app').controller('homedoctorController', function($scope,uiGridC
 		useExternalPagination: false,
 		useExternalSorting: false,
 		paginationChanged: function () {
-			alert('paginationChanged')
+			alert('paginationChanged');
 		}
 	};
 	$scope.gridOptions.onRegisterApi = function (gridApi) {
