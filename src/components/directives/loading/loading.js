@@ -1,7 +1,6 @@
 require('./loading.less');
 angular.module('common.directives').directive('customLoading',  function ($timeout) {
     return {
-        transclude:true,
         scope: {
             loading: '=customLoading'
         },
