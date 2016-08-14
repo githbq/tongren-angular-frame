@@ -4,7 +4,7 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 		customDialog.open({
 			title: '1111AAAAB',
 			animation: true,
-			content: require('./showdegtail.html'),
+			content: require('./showdetail.html'),
 			ctrl: function ($scope, $uibModalInstance) {
 
 			},
@@ -14,7 +14,7 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 			onClose: function () {
 			}
 		});
-	}
+	};
 	$scope.gridOptions = {
 	    totalItems: 60,
 	    enableSorting: false,
@@ -29,24 +29,18 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 	        alert('paginationChanged');
 	    }
 	};
-	$scope.gridOptions.onRegisterApi = function (gridApi) {
-	    $scope.gridOptions.gridApi = gridApi;
-	    //$interval( function() {
-	    //    $scope.gridApi.core.handleWindowResize();
-	    //}, 500, 10);
-	};
 	$scope.gridOptions.data = [
-		{accountName:'abcd2011',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2012',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2013',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2014',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2015',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2016',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2017',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'},
-		{accountName:'abcd2018',userName:'张三',job:'销售',手机号:'13789873643',teamName:'前线组',isOverTime:'是'}
+		{accountName:'abcd2011',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2012',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2013',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2014',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2015',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2016',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2017',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'},
+		{accountName:'abcd2018',userName:'张三',job:'销售',mobilePhone:'13789873643',teamName:'前线组',isOverTime:'是'}
 
 	];
-	$scope.gridOptions.data=$scope.gridOptions.data.concat($scope.gridOptions.data);
+	$scope.gridOptions.data=$scope.gridOptions.data.concat(angular.copy($scope.gridOptions.data));
 	$scope.gridOptions.columnDefs = [
 	    {displayName:'账号名称',name: 'accountName', aggregationType: uiGridConstants.aggregationTypes.count},
 		{displayName:'姓名',name:'userName', aggregationType: uiGridConstants.aggregationTypes.count},

@@ -14,6 +14,21 @@ angular.module('app').directive('normalGrid', function () {
                     }
                 }
             });
+            $scope.gridOptions.onRegisterApi = function (gridApi) {
+                $scope.gridOptions.gridApi = gridApi;
+                gridApi.core.addRowHeaderColumn( { name: '__sequence', displayName: '#', width: 30, cellTemplate:'ui-grid/uiGridCell'} );
+                gridApi.grid.registerRowsProcessor( $scope.addIndexColumn, 200 );
+                $scope.gridOptions.onRegisterApiCallback&&$scope.gridOptions.onRegisterApiCallback();
+                //$interval( function() {
+                //    $scope.gridApi.core.handleWindowResize();
+                //}, 500, 10);
+            };
+            $scope.addIndexColumn = function( renderableRows ){
+                angular.forEach(renderableRows,function( row ,i) {
+                    row.entity.__sequence=i+1;
+                });
+                return renderableRows;
+            }
             //$scope.gridOptions = {
             //    totalItems: 60,
             //    enableSorting: false,
