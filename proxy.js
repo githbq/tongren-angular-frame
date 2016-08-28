@@ -1,12 +1,12 @@
-module.exports={
+module.exports = {
     "proxies": [
-//        {
-//            "path": "/(login|resources|logout|g/api|getcaptcha)",
-//            "proxy": "172.31.103.107:8080"
-//        },
-//        {
-//            "path": "/(op/api|op/s/api)",
-//            "proxy": "172.31.103.107"
-//        }
+        // {
+        //     "path": "/(login|resources|logout|g/api|getcaptcha)",
+        //     "proxy": "172.31.103.107:8080"
+        // }
+        {
+            "path": "/(td/api)",
+            "proxy": "http://hj.fssde.com/cs"
+        }
     ]
 };

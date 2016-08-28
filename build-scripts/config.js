@@ -14,16 +14,14 @@ exports.path = {
 		index: ['./src/page/index/controller.js'],
 		// 二级路由入口文件chunk名必须是一级路由加二级路由，遵循驼峰命名规范
 		index_dialog: ['./src/page/index/dialog/controller.js'],
-		home: ['./src/page/home/controller.js'],
-		home_msgtalk: ['./src/page/home/msgtalk/controller.js'],
-		home_msgtalk2: ['./src/page/home/msgtalk2/controller.js'],
-		home_msgtalk3: ['./src/page/home/msgtalk3/controller.js'],
+		home: ['./src/page/home/controller.js'], 
 		home_account: ['./src/page/home/account/controller.js'],
 		home_info: ['./src/page/home/info/controller.js'],
 		home_patient: ['./src/page/home/patient/controller.js'],
 		home_doctor: ['./src/page/home/doctor/controller.js'],
 		home_meeting: ['./src/page/home/meeting/controller.js'],
 		home_shortmessage: ['./src/page/home/shortmessage/controller.js'],
-		home_dictionary: ['./src/page/home/dictionary/controller.js']
+		home_dictionary: ['./src/page/home/dictionary/controller.js'],
+		home_gaoxin: ['./src/page/home/gaoxin/controller.js']
 	}
 };

@@ -7,7 +7,7 @@ wrench.readdirSyncRecursive('./build-scripts').filter(function (file) {
     require('./build-scripts/' + file);
 });
 
-gulp.task('dev', ['server', 'devClear'], function() {
+gulp.task('dev', ['clean','server', 'devClear'], function() {
     gulp.run('watch');
 });
 gulp.task('build', ['clean', 'clear']);

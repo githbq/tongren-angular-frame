@@ -7,7 +7,7 @@ module.exports = [
   {
     test: /\.less$/,
     loader: ExtractTextPlugin.extract('css!postcss!less')
-  },
+  }, 
   {
     test: /\.(png|jpg|jpeg|gif|webp|svg)$/,
     loader: 'url-loader?name=images/[name].[hash:8].[ext]&limit=8192' // <8k的图片，输出为base64 dataurl

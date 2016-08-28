@@ -16,7 +16,7 @@ angular.module('app').directive('normalGrid', function () {
             });
             $scope.gridOptions.onRegisterApi = function (gridApi) {
                 $scope.gridOptions.gridApi = gridApi;
-                gridApi.core.addRowHeaderColumn( { name: '__sequence', displayName: '#', width: 30, cellTemplate:'ui-grid/uiGridCell'} );
+                gridApi.core.addRowHeaderColumn( { name: '__sequence', displayName: '#', width: 50, cellTemplate:'ui-grid/uiGridCell'} );
                 gridApi.grid.registerRowsProcessor( $scope.addIndexColumn, 200 );
                 $scope.gridOptions.onRegisterApiCallback&&$scope.gridOptions.onRegisterApiCallback();
                 //$interval( function() {

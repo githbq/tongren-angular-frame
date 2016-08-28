@@ -1,17 +1,18 @@
 require('./loading.less');
-angular.module('common.directives').directive('customLoading',  function ($timeout) {
+angular.module('common.directives').directive('customLoading', function ($timeout) {
     return {
-        scope: {
-            loading: '=customLoading'
-        },
         transclude: true,
+        scope: {
+            loading: '=customLoading',
+            text: '@text',
+            class: '@'
+        },
         template: require('./template.html'),
-        link: function (scope) {
-            scope.$watch('loading',function(newVal,OldVal){
-                $timeout(function(){
-                    scope.show=newVal;
-                },10);
+        link: function (scope, iElem, iAttr) {
+            iElem.addClass(scope.class);
+            scope.$watch('loading', function (newVal, OldVal) {
+                scope.show = newVal;
             });
         }
     };
-    } );
+});

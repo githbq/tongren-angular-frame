@@ -1,6 +1,6 @@
 var path = require('path');
 module.exports = {
-  extensions: ['', '.coffee', '.js', '.jsx'],
+  extensions: ['', '.js', '.jsx'],
   alias: {
     common: path.resolve(__dirname, '../', './src/common'),
     assets: path.resolve(__dirname, '../', './src/assets'),

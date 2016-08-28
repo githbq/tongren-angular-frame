@@ -19,6 +19,9 @@ module.exports = {
         'home': {
             'pageJsHashName': 'home',
             'subPage': {
+                'gaoxin': {
+                    'pageJsHashName': 'home_gaoxin'
+                },
                 'dictionary': {
                     'pageJsHashName': 'home_dictionary'
                 },
@@ -39,16 +42,7 @@ module.exports = {
                 },
                 'account': {
                     'pageJsHashName': 'home_account'
-                },
-                'msgtalk3': {
-                    'pageJsHashName': 'home_msgtalk3'
-                },
-                'msgtalk2': {
-                    'pageJsHashName': 'home_msgtalk2'
-                },
-                'msgtalk': {
-                    'pageJsHashName': 'home_msgtalk'
-                }
+                } 
             }
         }
     }

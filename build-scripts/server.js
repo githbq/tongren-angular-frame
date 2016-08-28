@@ -28,13 +28,13 @@ gulp.task('server', function() {
             proxies.push(proxy(proxyOptions));
         }
     });
-	//browserSync.init({
-	//	server: {
-	//		baseDir: config.path.build,
-     //       middleware: proxies
-	//	},
-	//	port: 8511
-	//});
+	browserSync.init({
+		server: {
+			baseDir: config.path.build,
+            middleware: proxies
+		},
+		port: 8555
+	});
 });
 
 gulp.task('reload', function() {

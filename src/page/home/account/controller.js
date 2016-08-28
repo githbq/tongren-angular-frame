@@ -6,7 +6,7 @@ angular.module('app').controller('homeaccountController', function($scope,uiGrid
 			animation: true,
 			content: require('./showdetail.html'),
 			ctrl: function ($scope, $uibModalInstance) {
-
+				$scope.save=function(){alert('save')}
 			},
 			size: size,
 			onLoad: function (selectedItem) {
