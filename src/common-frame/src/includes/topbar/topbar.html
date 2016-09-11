@@ -1,0 +1,35 @@
+<div class="topbar">
+    <div class="topbar-left">
+        <a class="navbar-toggle" ng-click="toggleNavbar()">
+            <span class="sr">Toggle navigation</span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="title">{{title}}</div>
+    </div>
+    <div class="topbar-right">
+        <ul class="tools">
+            <li>
+                <a href="#">
+                    <span class="menu-item account-name">{{accountName}}</span>
+                </a>
+            </li>
+            <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span title="消息" class="menu-item glyphicon glyphicon-envelope"><em>{{messages.length}}</em></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span title="用户" class="menu-item glyphicon glyphicon-user"></span>
+                </a>
+            </li>
+            <li>
+                <a href="/logout">
+                    <span title="退出" class="menu-item glyphicon glyphicon-log-out"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

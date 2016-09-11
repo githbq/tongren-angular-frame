@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="ibss">
+
+<head>
+    <title>登录系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+
+<body ng-controller="mainController">
+    <!--SIGN UP-->
+    <h1>欢迎登录同仁医生管理系统</h1>
+    <div class="login-form">
+        <div class="close"> </div>
+        <div class="head-info">
+            <label class="lbl-1"> </label>
+            <label class="lbl-2"> </label>
+            <label class="lbl-3"> </label>
+        </div>
+        <div class="clear"> </div>
+        <div class="avatar">
+            <img src="assets/images/avatar.png" />
+        </div>
+        <form>
+            <div class="username input-wrapper">
+                <input type="text" maxlength="10" placeholder="请输入账号" ng-model="user.loginName">
+            </div>
+            <div class="password input-wrapper">
+                <input maxlength="10" placeholder="请输入密码" type="password" ng-model="user.password">
+                <span ng-if="responseData &&!responseData.success" class="error-tip" title="{{responseData.msg}}"></span>
+            </div>
+        </form>
+        <div class="signin" ng-cloak>
+            <input type="submit" value="{{responseData && responseData.success?responseData.msg: '登录'}}" ng-click="login()">
+            <input type="submit" value="注册" ng-click="register()">
+        </div>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; 2016.Tongren
+            <!--<a href="/" target="_blank" title=""></a>
+            <a href="/" title="" target="_blank"></a>-->
+        </p>
+    </div>
+
+</body>
+
+</html>

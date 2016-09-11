@@ -1,0 +1,21 @@
+<div class="frame">
+    <div ui-layout ui-layout-loaded options="{flow:'column',dividerSize:0,disableToggle:true,disableMobileToggle:true}">
+        <div ui-layout-container collapsed="navbarCollapsed" size="200px">
+            <frame-navbar></frame-navbar>
+        </div>
+        <div ui-layout-container="central">
+            <div ui-layout options="{flow:'row',dividerSize:0,disableToggle:true,disableMobileToggle:true}">
+                <div ui-layout-container class="top" size="50px">
+                    <frame-topbar></frame-topbar>
+                </div>
+                <div ui-layout-container>
+                    <div class="frame-container">
+                        <div class="frame-container-content" ng-transclude>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <toaster-container toaster-options="{'position-class': 'toast-top-right'}"></toaster-container>
+</div>

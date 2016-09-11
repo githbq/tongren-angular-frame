@@ -1,0 +1,15 @@
+<div class="navbar">
+    <div class="logo"></div>
+    <ul>
+        <li ng-class="{collapse:item.children && item.collapsed,expand:item.children && !item.collapsed}" ng-repeat="item in menus track by $index">
+            <a href="{{item.url||'javascript:void(0)'}}">
+                <em class="icon {{item.icon}}"></em><span>{{item.title}}</span><em ng-if="item.children" ng-click="display(item,$event)" class="icon-display"></em>
+            </a>
+            <ul class="child" ng-if="item.children">
+                <li ng-repeat="item in item.children">
+                    <a href="{{item.url}}"><em class="icon {{item.icon}}" /><span>{{item.title}}</span></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

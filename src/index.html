@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="ibss" class="theme-default">
+
+<head>
+    <title>IBSS Archetype</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+</head>
+
+<body>
+    <div ng-if="!pageLoaded" class="custom-full-loading-mask show">
+        <div class="loading-content">
+            <span class="loading-icon"></span>
+            <span ng-if="loadingText" class="loading-text"></span>
+        </div>
+    </div>
+    <ibss-frame data-title="汇聚" data-build="dev">
+        <div ng-if="!viewsLoaded" class="custom-full-loading-mask show">
+            <div class="loading-content">
+                <span class="loading-icon"></span>
+                <span ng-if="loadingText" class="loading-text"></span>
+            </div>
+        </div>
+        <ui-view></ui-view>
+    </ibss-frame>
+</body>
+
+</html>

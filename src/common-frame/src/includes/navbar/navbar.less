@@ -1,0 +1,107 @@
+@GLOBAL_STYLES_DIR: '../../styles';
+@import '@{GLOBAL_STYLES_DIR}/theme.less';
+
+.frame .navbar {
+    background: @background_dark;
+    height: 100%;
+    overflow-y: hidden;
+    margin-bottom: 0;
+    border-radius: 0;
+
+    .logo {
+        width: 36px;
+        height: 36px;
+        background: url(./images/logo.png) no-repeat;
+        background-size: 36px 36px;
+        margin: 30px 0 30px 75px;
+    }
+
+    ul {
+        //width: 200px;
+        padding: 0;
+        position: relative;
+
+        li {
+            cursor: pointer;
+            display: block;
+            font-weight: bold;
+            list-style: outside none none;
+            position: relative;
+            &:hover {
+                background: @background_dark_focus;
+                opacity: 1;
+            }
+            &.expand .icon-display:before{
+                content: "\e260";
+            }
+            &.collapse .icon-display:before {
+                content: "\e259";
+            }
+            .child {
+                background: #0d131e;
+                overflow: hidden;
+            }
+            &.expand {
+                background: #0d131e;
+                .child {
+                    max-height: 300px;
+                    transition: 350ms ease-in;
+                }
+            }
+            &.collapse {
+                .child {
+                    max-height: 0;
+                    transition: 250ms ease-out;
+                }
+            }
+            a {
+                display: block;
+                line-height: 18px;
+                padding: 12px 5px 12px 15px;
+                position: relative;
+                text-decoration: none;
+                text-indent: 0;
+                opacity: 0.9;
+                &:hover, &:active {
+                    span {
+                        color: #fff;
+                    }
+                }
+                .icon {
+                    color: @color_main;
+                    display: inline-block;
+                    font-size: 15px;
+                    font-style: normal;
+                    height: 20px;
+                    line-height: 1;
+                    margin-right: 30px;
+                    width: 20px;
+                    vertical-align: text-top;
+                }
+                span {
+                    color: #9fabbd;
+                    -ms-text-overflow: clip;
+                    text-overflow: clip;
+                }
+                .icon-display {
+                    color: @color_main;
+                    opacity: 0.8;
+                    position: absolute;
+                    font-size: 10px;
+                    line-height: 45px;
+                    display: inline-block;
+                    width: 40px;
+                    text-align: center;
+                    right: 0;
+                    top: 0;
+                    font-family: "Glyphicons Halflings";
+                    font-weight: normal;
+                    font-style: normal;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

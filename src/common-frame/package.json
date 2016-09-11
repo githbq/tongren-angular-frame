@@ -1,0 +1,37 @@
+{
+  "name": "ibss-common-frame",
+  "version": "1.0.0",
+  "description": "ibss frame",
+  "scripts": {
+    "build": "webpack --config ./build-scripts/webpack.build.js --progress --profile --colors --display-error-details --display-cached --watch",
+    "release": "webpack --config ./build-scripts/webpack.release.js --progress --profile --colors --display-error-details"
+  },
+  "author": "Peng Wan",
+  "license": "ISC",
+  "repository": "http://git.firstshare.cn/ibss-fe/ibss-common-frame.git",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-local-storage": "^0.2.7",
+    "angular-ui-bootstrap": "^2.1.3",
+    "angular-ui-layout": "^1.4.2",
+    "angularjs-toaster": "^2.0.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "clean-webpack-plugin": "^0.1.10",
+    "css-loader": "^0.24.0",
+    "file-loader": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "ng-annotate-loader": "^0.1.1",
+    "path": "^0.12.7",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  }
+}
