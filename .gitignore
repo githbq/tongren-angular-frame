@@ -1,9 +1,0 @@
-/dist
-/build
-
-node_modules
-.idea
-*.iml
-workspace.xml
-
-npm-debug.log
