@@ -1,5 +1,6 @@
 # IBSS Common Archetype
-
+## Install -g  
+   npm i -g webpack-dev-server
 ## Install
 1. cd $root
 2. npm install
